@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleGiveAStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="StarryView" customModule="CircleGiveAStar" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rbp-Sk-MBU"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_picture" translatesAutoresizingMaskIntoConstraints="NO" id="YqQ-s9-NxJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="cWS-qy-dxn"/>
+                                    <constraint firstAttribute="height" constant="120" id="mf5-Ns-e2w"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.050000000000000003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4B-Ur-nRb" customClass="CircleMenu" customModule="CircleMenu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NRh-yA-pbB"/>
+                                    <constraint firstAttribute="width" constant="60" id="jYp-ap-WAN"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="S34-4o-N5V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N4B-Ur-nRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="31k-FA-pQu"/>
+                            <constraint firstItem="rbp-Sk-MBU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9Va-Io-J6X"/>
+                            <constraint firstItem="N4B-Ur-nRb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EBk-La-xut"/>
+                            <constraint firstItem="rbp-Sk-MBU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Gw6-5I-fWp"/>
+                            <constraint firstItem="rbp-Sk-MBU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LZA-rp-dfy"/>
+                            <constraint firstItem="YqQ-s9-NxJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z7l-42-6D4"/>
+                            <constraint firstItem="rbp-Sk-MBU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZmA-zj-nrN"/>
+                            <constraint firstItem="YqQ-s9-NxJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bic-qV-qDe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleMenu" destination="N4B-Ur-nRb" id="2ka-OA-ehC"/>
+                        <outlet property="profilePicture" destination="YqQ-s9-NxJ" id="X7h-sr-PMc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="977" height="1534"/>
+        <image name="profile_picture" width="300" height="300"/>
+    </resources>
+</document>
